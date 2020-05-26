@@ -1,0 +1,28 @@
+1
+
+Labsetup
+
+Components
+
+2
+
+SPA - Single Page Application!
+
+Directives
+
+3
+
+Pipes (Inbuilt and Custom)
+
+4
+
+Services & Dependency Injection!
+
+5
+
+HTTP Client - > Communicate with REST Api's
+
+Animations!
+
+
+

@@ -1,0 +1,27 @@
+.container{
+background-color: antiquewhite;
+width: 100%;
+height: 400px;
+position: relative;
+
+}
+
+.myhome{
+    background-color: bisque;
+    float: left;
+}
+
+.mycontact{
+    background-color: chartreuse;
+    float: left;
+    margin-left: 10px;
+    height: 150px;
+}
+
+
+.myservices{
+    background-color: coral;
+    float: left;
+    margin-left: 10px;
+    height: 150px;
+}
