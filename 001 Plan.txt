@@ -25,4 +25,11 @@ HTTP Client - > Communicate with REST Api's
 Animations!
 
 
+https://github.com/prafful/may2020_angular_basics
+
+https://www.youtube.com/playlist?list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ
+
+https://www.youtube.com/playlist?list=PL41lfR-6DnOruqMacTfff1zrEcqtmm7Fv
+
+https://www.youtube.com/playlist?list=PL081AC329706B2953
 
