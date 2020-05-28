@@ -1,0 +1,122 @@
+<p>all works!</p>
+
+Friends: {{  friends }}
+<br>
+<br>
+*ngFor Example:
+
+<ol>
+    <li *ngFor="let f of friends"> 
+        {{ f }}    
+    </li>
+</ol>
+
+<table border="1">
+ <thead>
+    <tr>
+        <th>User Id</th>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Status</th>
+    </tr>
+ </thead>
+ <tbody>
+     <tr *ngFor="let todo of todos">
+         <td> {{todo.userId }}</td>
+         <td> {{todo.id}} </td>
+         <td> {{todo.title}}  </td>
+         <td> {{todo.completed}} </td>
+     </tr>
+ </tbody>
+
+</table>
+<br><br>
+*ngIf directive example:
+<br>
+<button (click)="toggleDisplay()"  >Toggle Display</button> {{display}}
+<br>
+<div *ngIf="display; else otherTemplate"  style="width: 100px; height: 100px; background-color: brown;">
+    <p>hello all!!!!</p>
+</div>
+
+<ng-template #otherTemplate> 
+    <div style="background-color: burlywood; width: 150px; height: 150px;">
+        I am other display!
+    </div>
+
+</ng-template>
+
+<br>
+<br>
+*ngSwitchCase Example:
+<br>
+
+<div [ngSwitch]="message">
+    <div *ngSwitchCase="'OMG'">
+            <div style="height:50px; text-align: center; background-color:  coral;">
+                Oh My God!!!!
+            </div>
+    </div>
+    <div *ngSwitchCase="'GOYW'">
+        <div style="height:50px; text-align: center; background-color:  cornflowerblue;">
+            Get On Your Way!!!!
+        </div>
+    </div>
+    <div *ngSwitchCase="'GTW'">
+        <div style="height:50px; text-align: center; background-color:  greenyellow;">
+            Give The Way!!!!
+        </div>
+    </div>
+    <div *ngSwitchDefault>
+        <div style="height:50px; text-align: center; background-color: black">
+            I am Everywhere!!!!
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+ngStyle example:
+<br>
+Normal internal stylesheet way:
+<div style="background-color:rgb(255, 255, 0); width: 100px; height: 100px;">
+    OK OK OK ALL OK!
+</div>
+<br>
+ngStyle way:
+<div [ngStyle]="{
+                    backgroundColor: getColor(), 
+                    width: getWidth(), 
+                    height:getHeight()
+                }">
+    OK OK OK ALL OK!
+</div>
+
+Red: <input type="range"   min="0" max="255" [(ngModel)]="redcode">
+redcode: {{redcode}}
+<br>
+Green: <input type="range"   min="0" max="255" [(ngModel)]="greencode">
+greencode: {{greencode}}
+<br>
+Blue: <input type="range"   min="0" max="255" [(ngModel)]="bluecode">
+bluecode: {{bluecode}}
+<br>
+Width: <input type="range" min="10" max="200" [(ngModel)]="boxwidth">
+<br>
+Height: <input type="range" min="10" max="200" [(ngModel)]="boxheight">
+
+<br>
+<br>
+ngClass example:
+<br>
+Normal internal stylesheet way:
+<div class="myclass">
+    Some thing comes here!
+</div>
+<br>
+ngClass way:
+<br>
+<div [ngClass]="{myclass: status}">
+    Some thing comes here!
+</div>
+<button (click)="toggleStatus()">Toggle Status</button> {{status}}

@@ -8,6 +8,9 @@ import { ContactComponent } from './contact/contact.component';
 import { ServicesComponent } from './services/services.component';
 import { FamilyComponent } from './parent-child/family/family.component';
 import { NotfoundComponent } from './spa/notfound/notfound.component';
+import { AllComponent } from './directive/all/all.component';
+import { InbuiltComponent } from './allpipes/inbuilt/inbuilt.component';
+import { CustomComponent } from './allpipes/custom/custom.component';
 
 const routes: Routes = [
   {
@@ -42,6 +45,18 @@ const routes: Routes = [
   {
     path:'family',
     component:FamilyComponent
+  },
+  {
+    path:'directive',
+    component:AllComponent
+  },
+  {
+    path:'inbuiltpipe',
+    component:InbuiltComponent
+  },
+  {
+    path:'custompipe',
+    component:CustomComponent
   },
   {
     path:'**',

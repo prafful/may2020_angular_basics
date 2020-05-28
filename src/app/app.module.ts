@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from "@angular/forms";
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +17,10 @@ import { PageoneComponent } from './spa/pageone/pageone.component';
 import { PagetwoComponent } from './spa/pagetwo/pagetwo.component';
 import { PagethreeComponent } from './spa/pagethree/pagethree.component';
 import { NotfoundComponent } from './spa/notfound/notfound.component';
+import { AllComponent } from './directive/all/all.component';
+import { InbuiltComponent } from './allpipes/inbuilt/inbuilt.component';
+import { CustomComponent } from './allpipes/custom/custom.component';
+import { SortPipe } from './pipe/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -30,11 +36,16 @@ import { NotfoundComponent } from './spa/notfound/notfound.component';
     PageoneComponent,
     PagetwoComponent,
     PagethreeComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    AllComponent,
+    InbuiltComponent,
+    CustomComponent,
+    SortPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
