@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MathService } from 'src/app/services/math.service';
 
 @Component({
   selector: 'cts-pagetwo',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagetwoComponent implements OnInit {
 
-  constructor() { }
+  sc:number[]=null
+
+  constructor(private ms:MathService) { }
 
   ngOnInit(): void {
+    this.sc = this.ms.getScores()
+    this.ms.scores.push(5)
   }
 
 }

@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,6 +25,10 @@ import { AllComponent } from './directive/all/all.component';
 import { InbuiltComponent } from './allpipes/inbuilt/inbuilt.component';
 import { CustomComponent } from './allpipes/custom/custom.component';
 import { SortPipe } from './pipe/sort.pipe';
+import { TemplateComponent } from './forms/template/template.component';
+import { ReactiveComponent } from './forms/reactive/reactive.component';
+import { RemoteComponent } from './consume/remote/remote.component';
+import { TextanimateComponent } from './animation/textanimate/textanimate.component';
 
 @NgModule({
   declarations: [
@@ -40,12 +48,19 @@ import { SortPipe } from './pipe/sort.pipe';
     AllComponent,
     InbuiltComponent,
     CustomComponent,
-    SortPipe
+    SortPipe,
+    TemplateComponent,
+    ReactiveComponent,
+    RemoteComponent,
+    TextanimateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

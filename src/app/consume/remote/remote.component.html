@@ -1,0 +1,22 @@
+<p>remote works!</p>
+
+Users:
+<table border="1">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Lat</th>
+            <th>Long</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of users">
+            <td> {{u.id}} </td>
+            <td> {{u.username}}  </td>
+            <td> {{u.address.geo.lat}} </td>
+            <td> {{u.address.geo.lng}} </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MathService } from 'src/app/services/math.service';
 
 @Component({
   selector: 'cts-pageone',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageoneComponent implements OnInit {
 
-  constructor() { }
+  myscores:number[] = null
+  message:any = ""
+
+  //you inject the service by declaring the service instance as a parameter
+  //to constructor
+  constructor(private math: MathService) { }
 
   ngOnInit(): void {
+    this.myscores = this.math.scores
+    this.message = this.math.welcome()
+    this.math.scores.push(4)
   }
 
 }

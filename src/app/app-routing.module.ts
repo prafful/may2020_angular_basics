@@ -11,11 +11,15 @@ import { NotfoundComponent } from './spa/notfound/notfound.component';
 import { AllComponent } from './directive/all/all.component';
 import { InbuiltComponent } from './allpipes/inbuilt/inbuilt.component';
 import { CustomComponent } from './allpipes/custom/custom.component';
+import { TemplateComponent } from './forms/template/template.component';
+import { ReactiveComponent } from './forms/reactive/reactive.component';
+import { RemoteComponent } from './consume/remote/remote.component';
+import { TextanimateComponent } from './animation/textanimate/textanimate.component';
 
 const routes: Routes = [
   {
     path:'',
-    redirectTo:'home  ',
+    redirectTo:'home',
     pathMatch:'full'
   },
   {
@@ -57,6 +61,22 @@ const routes: Routes = [
   {
     path:'custompipe',
     component:CustomComponent
+  },
+  {
+    path:'templateform',
+    component:TemplateComponent
+  },
+  {
+    path:'reactiveform',
+    component:ReactiveComponent
+  },
+  {
+    path:'remote',
+    component:RemoteComponent
+  },
+  {
+    path:'animate',
+    component:TextanimateComponent
   },
   {
     path:'**',
